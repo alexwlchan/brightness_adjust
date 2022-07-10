@@ -1,5 +1,5 @@
 # CHANGELOG
 
-## v0.1.1 - 2022-07-10
+## v1.0.0 - 2022-07-10
 
-"Hello world" release to set up CI.
+Initial release.
