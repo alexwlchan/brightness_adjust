@@ -16,7 +16,7 @@ struct OutputValue {
 }
 
 fn main() {
-    let matches = Command::new("brightness_adjust")
+    let matches = clap::Command::new("brightness_adjust")
         .version(VERSION)
         .author("Alex Chan <alex@alexwlchan.net>")
         .about("Show some darker/lighter variants of a given colour")
