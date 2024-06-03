@@ -29,7 +29,7 @@ fn main() {
         .get_matches();
 
     // This .unwrap() is safe because "path" is a required param
-    let base_colour = matches.value_of("COLOUR").unwrap();
+    let base_colour = matches.get_one::<String>("COLOUR").expect("`COLOUR` is required");
 
     let rgb = match Srgb::from_str(base_colour) {
         Ok(c) => c.into_format::<u8>(),
