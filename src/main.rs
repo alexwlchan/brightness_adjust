@@ -3,7 +3,7 @@
 use std::cmp::Ordering::Equal;
 use std::str::FromStr;
 
-use clap::{App, Arg};
+use clap::Arg;
 use palette::{FromColor, Hsv, Srgb};
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
@@ -16,12 +16,12 @@ struct OutputValue {
 }
 
 fn main() {
-    let matches = App::new("brightness_adjust")
+    let matches = Command::new("brightness_adjust")
         .version(VERSION)
         .author("Alex Chan <alex@alexwlchan.net>")
         .about("Show some darker/lighter variants of a given colour")
         .arg(
-            Arg::with_name("COLOUR")
+            Arg::new("COLOUR")
                 .help("colour to start with as a hex string, e.g. #d01c11")
                 .required(true)
                 .index(1),
