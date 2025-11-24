@@ -4,5 +4,5 @@ version = "1.0.2"
 edition = "2021"
 
 [dependencies]
-clap = "4.5.51"
+clap = "4.5.53"
 palette = "0.7.6"
